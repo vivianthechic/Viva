@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4490F5D5250AE221009EBFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4490F5D4250AE221009EBFBE /* AppDelegate.swift */; };
+		4490F5D7250AE221009EBFBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4490F5D6250AE221009EBFBE /* ViewController.swift */; };
+		4490F5DA250AE221009EBFBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4490F5D8250AE221009EBFBE /* Main.storyboard */; };
+		4490F5DC250AE224009EBFBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4490F5DB250AE224009EBFBE /* Assets.xcassets */; };
+		4490F5DF250AE224009EBFBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4490F5DD250AE224009EBFBE /* LaunchScreen.storyboard */; };
+		4490F5EA250AE224009EBFBE /* VivaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4490F5E9250AE224009EBFBE /* VivaTests.swift */; };
+		4490F5F5250AE224009EBFBE /* VivaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4490F5F4250AE224009EBFBE /* VivaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4490F5E6250AE224009EBFBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4490F5C9250AE221009EBFBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4490F5D0250AE221009EBFBE;
+			remoteInfo = Viva;
+		};
+		4490F5F1250AE224009EBFBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4490F5C9250AE221009EBFBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4490F5D0250AE221009EBFBE;
+			remoteInfo = Viva;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4490F5D1250AE221009EBFBE /* Viva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viva.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4490F5D4250AE221009EBFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4490F5D6250AE221009EBFBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4490F5D9250AE221009EBFBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4490F5DB250AE224009EBFBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4490F5DE250AE224009EBFBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4490F5E0250AE224009EBFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4490F5E5250AE224009EBFBE /* VivaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4490F5E9250AE224009EBFBE /* VivaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaTests.swift; sourceTree = "<group>"; };
+		4490F5EB250AE224009EBFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4490F5F0250AE224009EBFBE /* VivaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4490F5F4250AE224009EBFBE /* VivaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaUITests.swift; sourceTree = "<group>"; };
+		4490F5F6250AE224009EBFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4490F5CE250AE221009EBFBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4490F5E2250AE224009EBFBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4490F5ED250AE224009EBFBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4490F5C8250AE221009EBFBE = {
+			isa = PBXGroup;
+			children = (
+				4490F5D3250AE221009EBFBE /* Viva */,
+				4490F5E8250AE224009EBFBE /* VivaTests */,
+				4490F5F3250AE224009EBFBE /* VivaUITests */,
+				4490F5D2250AE221009EBFBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4490F5D2250AE221009EBFBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4490F5D1250AE221009EBFBE /* Viva.app */,
+				4490F5E5250AE224009EBFBE /* VivaTests.xctest */,
+				4490F5F0250AE224009EBFBE /* VivaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4490F5D3250AE221009EBFBE /* Viva */ = {
+			isa = PBXGroup;
+			children = (
+				4490F5D4250AE221009EBFBE /* AppDelegate.swift */,
+				4490F5D6250AE221009EBFBE /* ViewController.swift */,
+				4490F5D8250AE221009EBFBE /* Main.storyboard */,
+				4490F5DB250AE224009EBFBE /* Assets.xcassets */,
+				4490F5DD250AE224009EBFBE /* LaunchScreen.storyboard */,
+				4490F5E0250AE224009EBFBE /* Info.plist */,
+			);
+			path = Viva;
+			sourceTree = "<group>";
+		};
+		4490F5E8250AE224009EBFBE /* VivaTests */ = {
+			isa = PBXGroup;
+			children = (
+				4490F5E9250AE224009EBFBE /* VivaTests.swift */,
+				4490F5EB250AE224009EBFBE /* Info.plist */,
+			);
+			path = VivaTests;
+			sourceTree = "<group>";
+		};
+		4490F5F3250AE224009EBFBE /* VivaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4490F5F4250AE224009EBFBE /* VivaUITests.swift */,
+				4490F5F6250AE224009EBFBE /* Info.plist */,
+			);
+			path = VivaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4490F5D0250AE221009EBFBE /* Viva */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4490F5F9250AE224009EBFBE /* Build configuration list for PBXNativeTarget "Viva" */;
+			buildPhases = (
+				4490F5CD250AE221009EBFBE /* Sources */,
+				4490F5CE250AE221009EBFBE /* Frameworks */,
+				4490F5CF250AE221009EBFBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Viva;
+			productName = Viva;
+			productReference = 4490F5D1250AE221009EBFBE /* Viva.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4490F5E4250AE224009EBFBE /* VivaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4490F5FC250AE224009EBFBE /* Build configuration list for PBXNativeTarget "VivaTests" */;
+			buildPhases = (
+				4490F5E1250AE224009EBFBE /* Sources */,
+				4490F5E2250AE224009EBFBE /* Frameworks */,
+				4490F5E3250AE224009EBFBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4490F5E7250AE224009EBFBE /* PBXTargetDependency */,
+			);
+			name = VivaTests;
+			productName = VivaTests;
+			productReference = 4490F5E5250AE224009EBFBE /* VivaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4490F5EF250AE224009EBFBE /* VivaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4490F5FF250AE224009EBFBE /* Build configuration list for PBXNativeTarget "VivaUITests" */;
+			buildPhases = (
+				4490F5EC250AE224009EBFBE /* Sources */,
+				4490F5ED250AE224009EBFBE /* Frameworks */,
+				4490F5EE250AE224009EBFBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4490F5F2250AE224009EBFBE /* PBXTargetDependency */,
+			);
+			name = VivaUITests;
+			productName = VivaUITests;
+			productReference = 4490F5F0250AE224009EBFBE /* VivaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4490F5C9250AE221009EBFBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = PennAppsXXI;
+				TargetAttributes = {
+					4490F5D0250AE221009EBFBE = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					4490F5E4250AE224009EBFBE = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 4490F5D0250AE221009EBFBE;
+					};
+					4490F5EF250AE224009EBFBE = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 4490F5D0250AE221009EBFBE;
+					};
+				};
+			};
+			buildConfigurationList = 4490F5CC250AE221009EBFBE /* Build configuration list for PBXProject "Viva" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4490F5C8250AE221009EBFBE;
+			productRefGroup = 4490F5D2250AE221009EBFBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4490F5D0250AE221009EBFBE /* Viva */,
+				4490F5E4250AE224009EBFBE /* VivaTests */,
+				4490F5EF250AE224009EBFBE /* VivaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4490F5CF250AE221009EBFBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4490F5DF250AE224009EBFBE /* LaunchScreen.storyboard in Resources */,
+				4490F5DC250AE224009EBFBE /* Assets.xcassets in Resources */,
+				4490F5DA250AE221009EBFBE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4490F5E3250AE224009EBFBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4490F5EE250AE224009EBFBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4490F5CD250AE221009EBFBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4490F5D7250AE221009EBFBE /* ViewController.swift in Sources */,
+				4490F5D5250AE221009EBFBE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4490F5E1250AE224009EBFBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4490F5EA250AE224009EBFBE /* VivaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4490F5EC250AE224009EBFBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4490F5F5250AE224009EBFBE /* VivaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4490F5E7250AE224009EBFBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4490F5D0250AE221009EBFBE /* Viva */;
+			targetProxy = 4490F5E6250AE224009EBFBE /* PBXContainerItemProxy */;
+		};
+		4490F5F2250AE224009EBFBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4490F5D0250AE221009EBFBE /* Viva */;
+			targetProxy = 4490F5F1250AE224009EBFBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4490F5D8250AE221009EBFBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4490F5D9250AE221009EBFBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4490F5DD250AE224009EBFBE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4490F5DE250AE224009EBFBE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4490F5F7250AE224009EBFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4490F5F8250AE224009EBFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4490F5FA250AE224009EBFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Viva/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennappsxxi.Viva;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4490F5FB250AE224009EBFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Viva/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennappsxxi.Viva;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4490F5FD250AE224009EBFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VivaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennappsxxi.VivaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viva.app/Viva";
+			};
+			name = Debug;
+		};
+		4490F5FE250AE224009EBFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VivaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennappsxxi.VivaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viva.app/Viva";
+			};
+			name = Release;
+		};
+		4490F600250AE224009EBFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VivaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennappsxxi.VivaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Viva;
+			};
+			name = Debug;
+		};
+		4490F601250AE224009EBFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VivaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pennappsxxi.VivaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Viva;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4490F5CC250AE221009EBFBE /* Build configuration list for PBXProject "Viva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4490F5F7250AE224009EBFBE /* Debug */,
+				4490F5F8250AE224009EBFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4490F5F9250AE224009EBFBE /* Build configuration list for PBXNativeTarget "Viva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4490F5FA250AE224009EBFBE /* Debug */,
+				4490F5FB250AE224009EBFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4490F5FC250AE224009EBFBE /* Build configuration list for PBXNativeTarget "VivaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4490F5FD250AE224009EBFBE /* Debug */,
+				4490F5FE250AE224009EBFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4490F5FF250AE224009EBFBE /* Build configuration list for PBXNativeTarget "VivaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4490F600250AE224009EBFBE /* Debug */,
+				4490F601250AE224009EBFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4490F5C9250AE221009EBFBE /* Project object */;
+}
