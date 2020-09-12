@@ -17,6 +17,7 @@ class StyleUtilities {
         bottomLine.backgroundColor = UIColor(red: 0.02, green: 0.34, blue: 0.40, alpha: 1.00).cgColor
         textfield.borderStyle = .none
         textfield.layer.addSublayer(bottomLine)
+        textfield.textColor = UIColor(red: 0.02, green: 0.34, blue: 0.40, alpha: 1.00)
     }
     
     static func styleFilledButton(_ button:UIButton){
