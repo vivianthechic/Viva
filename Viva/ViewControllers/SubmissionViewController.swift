@@ -8,16 +8,37 @@
 
 import UIKit
 
+import Firebase
 import FirebaseCore
 import FirebaseFirestore
 //import FirebaseAnalytics
 
-class SubmissionViewController: UIViewController {
+// constant
+let quoteText = "My experience..."
+let quoteAuthor = "The author is..."
+
+// SubmissionViewController
+class SubmissionViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    // MARK: Outlets & Properties
+    @IBOutlet var safetyButton: [UIButton]!
+    @IBOutlet var geolocationButton: [UIButton]!
+
+    // Document Reference
     var survivordata: Firestore!
+    var docRef: DocumentReference!
+    
+    // Geotapped Button Response
+    @IBAction func saveGeoTapped(_sender: UIButton!) {
+        // create function for tapped button
+        print("Button Tapped!")
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //docRef = Firebase.firestore().collection("sample data").document("sampleData/inspiration");
 
         // Do any additional setup after loading the view.
     }
@@ -29,7 +50,7 @@ class SubmissionViewController: UIViewController {
     
     // create a database collection for geolocation
     
-    @IBOutlet weak var someView:UIView!
+    @IBOutlet weak var geoView:UIView!
     
     // create the button here
     @IBAction func didClickReportButton(_sender: AnyObject) {
