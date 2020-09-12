@@ -13,16 +13,40 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
     
     var source: MGLShapeSource!
     var timer = Timer()
-    
+    var searchButton:UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Create and add a map view.
         let mapView = MGLMapView(frame: view.bounds, styleURL: MGLStyle.lightStyleURL)
         mapView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         mapView.delegate = self
         mapView.tintColor = .lightGray
         view.addSubview(mapView)
+        
+        mapView.showsUserLocation = true
+        //mapView.setUserTrackingMode(.follow, animated: true) {
+        //}
+        addButton()
+    }
+    
+    func addButton(){
+        searchButton = UIButton(frame: CGRect(x: (view.frame.width/2) - 100, y: view.frame.height - 150, width: 200, height: 50))
+        searchButton.backgroundColor = .white
+        searchButton.setTitle("SEARCH",for: .normal)
+        searchButton.setTitleColor(UIColor(red: 59/255, green: 178/255, blue: 208/255, alpha: 1), for: .normal)
+        searchButton.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold",size:18)
+        searchButton.layer.cornerRadius = 25
+        searchButton.layer.shadowOffset = CGSize(width: 0, height: 10)
+        searchButton.layer.shadowColor = UIColor.black.cgColor
+        searchButton.layer.shadowRadius = 5
+        searchButton.layer.shadowOpacity = 0.3
+        searchButton.addTarget(self, action: #selector(searchButtonWasPressed(_:)), for: .touchUpInside)
+        view.addSubview(searchButton)
+        
+    }
+    
+    @objc func searchButtonWasPressed(_ sender:UIButton){
+        
     }
     
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
