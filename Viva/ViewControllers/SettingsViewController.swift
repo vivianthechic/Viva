@@ -22,7 +22,7 @@ class SettingsViewController: UIViewController {
     
     func setUpElements() {
         // Style elements
-        StyleUtilities.styleFilledButton(logoutButton)
+        StyleUtilities.styleHollowButton(logoutButton)
     }
 
     override func didReceiveMemoryWarning() {

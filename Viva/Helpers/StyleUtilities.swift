@@ -23,13 +23,12 @@ class StyleUtilities {
     static func styleFilledButton(_ button:UIButton){
         button.backgroundColor = UIColor(red: 0.02, green: 0.34, blue: 0.40, alpha: 1.00)
         button.layer.cornerRadius = 25.0
-        button.tintColor = UIColor.white
+        button.tintColor = UIColor(red: 0.97, green: 0.96, blue: 0.79, alpha: 1.00)
     }
     
     static func styleHollowButton(_ button:UIButton){
-        button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor(red: 0.02, green: 0.34, blue: 0.40, alpha: 1.00).cgColor
+        button.backgroundColor = UIColor(red: 0.39, green: 0.84, blue: 0.76, alpha: 1.00)
         button.layer.cornerRadius = 25.0
-        button.tintColor = UIColor(red: 0.02, green: 0.34, blue: 0.40, alpha: 1.00)
+        button.tintColor = UIColor(red: 0.97, green: 0.96, blue: 0.79, alpha: 1.00)
     }
 }
