@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     func setUpElements(){
         StyleUtilities.styleFilledButton(signUpButton)
-        StyleUtilities.styleHollowButton(loginButton)
+        StyleUtilities.styleFilledButton(loginButton)
     }
 
     override func didReceiveMemoryWarning() {
