@@ -15,11 +15,32 @@ import FirebaseFirestore
 class SubmissionViewController: UIViewController {
     
     var survivordata: Firestore!
-
+    @IBOutlet weak var titleLabel: UILabel!
+    var imageView: UIImageView = {
+        let imageView = UIImageView(frame:.zero)
+        imageView.image = UIImage(named: "submission_bg.png")
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.insertSubview(imageView, at: 0)
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: view.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
         // Do any additional setup after loading the view.
+        setUpElements()
+    }
+    
+    func setUpElements(){
+        titleLabel.clipsToBounds = true
+        titleLabel.layer.cornerRadius = 25.0
     }
 
     override func didReceiveMemoryWarning() {
