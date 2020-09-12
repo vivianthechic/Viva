@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		444AE539250C0834002C02D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE538250C0834002C02D7 /* LoginViewController.swift */; };
 		444AE53B250C0842002C02D7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE53A250C0842002C02D7 /* SignUpViewController.swift */; };
 		444AE53D250C0854002C02D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE53C250C0854002C02D7 /* HomeViewController.swift */; };
-		444AE53F250C086C002C02D7 /* SubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE53E250C086C002C02D7 /* SubmissionViewController.swift */; };
 		444AE541250C0878002C02D7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE540250C0878002C02D7 /* SettingsViewController.swift */; };
 		444AE547250C5541002C02D7 /* FormUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE546250C5541002C02D7 /* FormUtilities.swift */; };
 		444AE549250C554E002C02D7 /* StyleUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE548250C554E002C02D7 /* StyleUtilities.swift */; };
@@ -25,6 +24,7 @@
 		4490F5EA250AE224009EBFBE /* VivaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4490F5E9250AE224009EBFBE /* VivaTests.swift */; };
 		4490F5F5250AE224009EBFBE /* VivaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4490F5F4250AE224009EBFBE /* VivaUITests.swift */; };
 		F1303D01954886851BBBF717 /* Pods_Viva_VivaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992E8C958B320F73307BC7FE /* Pods_Viva_VivaUITests.framework */; };
+		F4FA222A250CABBE00092D37 /* SubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA2229250CABBE00092D37 /* SubmissionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,6 @@
 		444AE538250C0834002C02D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		444AE53A250C0842002C02D7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		444AE53C250C0854002C02D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		444AE53E250C086C002C02D7 /* SubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionViewController.swift; sourceTree = "<group>"; };
 		444AE540250C0878002C02D7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		444AE546250C5541002C02D7 /* FormUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUtilities.swift; sourceTree = "<group>"; };
 		444AE548250C554E002C02D7 /* StyleUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleUtilities.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		992E8C958B320F73307BC7FE /* Pods_Viva_VivaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viva_VivaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB28F1849323FB57D9B785F6 /* Pods-VivaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivaTests.debug.xcconfig"; path = "Target Support Files/Pods-VivaTests/Pods-VivaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4ACDC71BE5E5E308958EBFE /* Pods-Viva-VivaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viva-VivaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Viva-VivaUITests/Pods-Viva-VivaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F4FA2229250CABBE00092D37 /* SubmissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionViewController.swift; sourceTree = "<group>"; };
 		F9F68320810F0AE998189B00 /* Pods-Viva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viva.debug.xcconfig"; path = "Target Support Files/Pods-Viva/Pods-Viva.debug.xcconfig"; sourceTree = "<group>"; };
 		FA06F0F7139A8F60A88DF87E /* Pods-VivaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivaTests.release.xcconfig"; path = "Target Support Files/Pods-VivaTests/Pods-VivaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,18 +125,17 @@
 				AB28F1849323FB57D9B785F6 /* Pods-VivaTests.debug.xcconfig */,
 				FA06F0F7139A8F60A88DF87E /* Pods-VivaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		444AE542250C087F002C02D7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4FA2229250CABBE00092D37 /* SubmissionViewController.swift */,
 				4490F5D6250AE221009EBFBE /* ViewController.swift */,
 				444AE538250C0834002C02D7 /* LoginViewController.swift */,
 				444AE53A250C0842002C02D7 /* SignUpViewController.swift */,
 				444AE53C250C0854002C02D7 /* HomeViewController.swift */,
-				444AE53E250C086C002C02D7 /* SubmissionViewController.swift */,
 				444AE540250C0878002C02D7 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -448,8 +447,8 @@
 			files = (
 				444AE53D250C0854002C02D7 /* HomeViewController.swift in Sources */,
 				444AE539250C0834002C02D7 /* LoginViewController.swift in Sources */,
+				F4FA222A250CABBE00092D37 /* SubmissionViewController.swift in Sources */,
 				444AE541250C0878002C02D7 /* SettingsViewController.swift in Sources */,
-				444AE53F250C086C002C02D7 /* SubmissionViewController.swift in Sources */,
 				4490F5D7250AE221009EBFBE /* ViewController.swift in Sources */,
 				444AE53B250C0842002C02D7 /* SignUpViewController.swift in Sources */,
 				444AE547250C5541002C02D7 /* FormUtilities.swift in Sources */,

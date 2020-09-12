@@ -10,7 +10,7 @@ import UIKit
 
 import FirebaseCore
 import FirebaseFirestore
-import FirebaseFirestoreSwift
+//import FirebaseFirestoreSwift
 
 class ViewController: UIViewController {
 
@@ -26,13 +26,9 @@ class ViewController: UIViewController {
         Firestore.firestore().settings = settings
         
         // end setup
-        db = Firestore.firestore();
+        //db = Firestore.firestore();
         
         setUpElements()
-    }
-    
-    override func didRecieveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     func setUpElements(){
