@@ -10,10 +10,24 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setUpElements()
+    }
+    
+    func setUpElements(){
+        //Hide error label
+        errorLabel.alpha = 0
+        
+        //Style elements
+        StyleUtilities.styleFilledButton(loginButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +46,7 @@ class LoginViewController: UIViewController {
     }
     */
 
+    @IBAction func loginTapped(_ sender: Any) {
+    }
+    
 }
