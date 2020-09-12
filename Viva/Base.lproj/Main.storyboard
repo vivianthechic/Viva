@@ -329,7 +329,7 @@
             </objects>
             <point key="canvasLocation" x="3593" y="-938"/>
         </scene>
-        <!--New Submission-->
+        <!--Submission View Controller-->
         <scene sceneID="lGI-t3-Xnm">
             <objects>
                 <viewController id="Hic-3z-4o5" customClass="SubmissionViewController" customModule="Viva" customModuleProvider="target" sceneMemberID="viewController">
@@ -339,7 +339,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="OdZ-BK-9Vf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Submission" id="qlx-kv-WHc"/>
+                    <navigationItem key="navigationItem" id="qlx-kv-WHc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chQ-iJ-iH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

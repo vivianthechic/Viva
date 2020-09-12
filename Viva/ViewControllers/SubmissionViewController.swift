@@ -8,7 +8,13 @@
 
 import UIKit
 
+//import FirebaseCore
+// import Firebase
+//import FirebaseAnalytics
+
 class SubmissionViewController: UIViewController {
+    
+    // var db: Firestore
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +27,25 @@ class SubmissionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // create a database collection for geolocation
+    
+    /*
+    // create the button here
+    @IBAction func didClickReportButton(_sender: AnyObject) {
+        // Quickstart
+        
+        // Data Collection
+        listenDocument()
+    }
+    
+    private func listenDocument() {
+        // [START] listen document
+        db.collection("cities").document("SF")
+        
+        
+    }
 
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +55,6 @@ class SubmissionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+ */
 
 }
