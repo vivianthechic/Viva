@@ -15,7 +15,8 @@ Even with the #MeToo movement, there's only so much that technology can do. Howe
 - XCode & Swift
 - Firebase
 - Adobe Illustrator
-- Google Cloud & Firebase
+- Google Cloud
+- Canva
 
 ## Mentors & Help
 - Ryan Matsumoto
@@ -23,7 +24,7 @@ Even with the #MeToo movement, there's only so much that technology can do. Howe
 
 ## Categories
 - Route: Hack for Resilience
-- Best use of Google Cloud
+- Route: Best Education Hack
 
 ## User/sociologist questions
 - To take this further within the research sphere, there would be Privacy/IRB considerations, according to Rachel Lovell, an sociologist who specializes in sexual assault. Currently, the app maps dangerous areas without specifying an address, to avoid privacy concerns about locations of assaults.
@@ -37,8 +38,10 @@ Even with the #MeToo movement, there's only so much that technology can do. Howe
 
 ## Installation
 
+## Survey results
+We surveyed Case Western Reserve University students on the viability of a viva product. 83.33% reported that they know someone who has been a victim of sexual assault on a college campus, and 45.45% were victims themselves. 83.33% had noticed a rise of sexual assault allegations about college campus sexual assault on social media, which was the original driving force and inspiration of our app. Last, 100% responded that they believe an app like viva would be effective at keeping them safe from campus sexual assault. The survey indicated that the app could be a useful and desired tool for college students dealing with fear of harm on campus.
+
+## Coding difficulties
+
 ## Contributors
-Andrea Tongsak
-Vivian Zhang
-Alyssa Tan
-Mira Tellegen
+Andrea Tongsak, Vivian Zhang, Alyssa Tan, and Mira Tellegen
