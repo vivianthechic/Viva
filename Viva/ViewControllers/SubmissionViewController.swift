@@ -64,7 +64,6 @@ class SubmissionViewController: UIViewController {
             (querySnapshot, err) in
             if let err = err {
                 print ("Error getting documents");
-                //print ("Error getting documents");
             }
         
     }
