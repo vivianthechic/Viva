@@ -12,6 +12,9 @@
 		444AE53D250C0854002C02D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE53C250C0854002C02D7 /* HomeViewController.swift */; };
 		444AE53F250C086C002C02D7 /* SubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE53E250C086C002C02D7 /* SubmissionViewController.swift */; };
 		444AE541250C0878002C02D7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE540250C0878002C02D7 /* SettingsViewController.swift */; };
+		444AE547250C5541002C02D7 /* FormUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE546250C5541002C02D7 /* FormUtilities.swift */; };
+		444AE549250C554E002C02D7 /* StyleUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE548250C554E002C02D7 /* StyleUtilities.swift */; };
+		444AE54B250C5C36002C02D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 444AE54A250C5C36002C02D7 /* GoogleService-Info.plist */; };
 		4490F5D5250AE221009EBFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4490F5D4250AE221009EBFBE /* AppDelegate.swift */; };
 		4490F5D7250AE221009EBFBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4490F5D6250AE221009EBFBE /* ViewController.swift */; };
 		4490F5DA250AE221009EBFBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4490F5D8250AE221009EBFBE /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		444AE53C250C0854002C02D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		444AE53E250C086C002C02D7 /* SubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionViewController.swift; sourceTree = "<group>"; };
 		444AE540250C0878002C02D7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		444AE546250C5541002C02D7 /* FormUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUtilities.swift; sourceTree = "<group>"; };
+		444AE548250C554E002C02D7 /* StyleUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleUtilities.swift; sourceTree = "<group>"; };
+		444AE54A250C5C36002C02D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4490F5D1250AE221009EBFBE /* Viva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viva.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4490F5D4250AE221009EBFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4490F5D6250AE221009EBFBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		444AE545250C551B002C02D7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				444AE546250C5541002C02D7 /* FormUtilities.swift */,
+				444AE548250C554E002C02D7 /* StyleUtilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4490F5C8250AE221009EBFBE = {
 			isa = PBXGroup;
 			children = (
@@ -120,9 +135,11 @@
 		4490F5D3250AE221009EBFBE /* Viva */ = {
 			isa = PBXGroup;
 			children = (
+				444AE545250C551B002C02D7 /* Helpers */,
 				444AE542250C087F002C02D7 /* ViewControllers */,
 				4490F5D4250AE221009EBFBE /* AppDelegate.swift */,
 				4490F5D8250AE221009EBFBE /* Main.storyboard */,
+				444AE54A250C5C36002C02D7 /* GoogleService-Info.plist */,
 				4490F5DB250AE224009EBFBE /* Assets.xcassets */,
 				4490F5DD250AE224009EBFBE /* LaunchScreen.storyboard */,
 				4490F5E0250AE224009EBFBE /* Info.plist */,
@@ -253,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4490F5DF250AE224009EBFBE /* LaunchScreen.storyboard in Resources */,
+				444AE54B250C5C36002C02D7 /* GoogleService-Info.plist in Resources */,
 				4490F5DC250AE224009EBFBE /* Assets.xcassets in Resources */,
 				4490F5DA250AE221009EBFBE /* Main.storyboard in Resources */,
 			);
@@ -285,6 +303,8 @@
 				444AE53F250C086C002C02D7 /* SubmissionViewController.swift in Sources */,
 				4490F5D7250AE221009EBFBE /* ViewController.swift in Sources */,
 				444AE53B250C0842002C02D7 /* SignUpViewController.swift in Sources */,
+				444AE547250C5541002C02D7 /* FormUtilities.swift in Sources */,
+				444AE549250C554E002C02D7 /* StyleUtilities.swift in Sources */,
 				4490F5D5250AE221009EBFBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
