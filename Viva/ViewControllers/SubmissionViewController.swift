@@ -55,7 +55,7 @@ class SubmissionViewController: UIViewController {
     // create the button here
     @IBAction func didClickReportButton(_sender: AnyObject) {
         // Quickstart
-        
+        print("report was made")
         
         // Data Collection
         //listenDocument()
