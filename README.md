@@ -18,12 +18,19 @@ With the #MeToo movement, there's only so much that technology can do. We hope t
 - Google Cloud & Firebase
 
 ## Mentors & Help
-- 
+- Ryan Matsumoto
+- Rachel Lovell
 
 ## Categories
+- Route: Hack for Resilience
+- Best use of Google Cloud
 
-
-## User responses
-- 
+## User/sociologist questions
+- To take this further within the research sphere, there would be Privacy/IRB considerations, according to Rachel Lovell, an sociologist who specializes in sexual assault.
+- Other concerns? How accurate is this information?
+- Why would students need this?
+- What makes a student report and what discourages them from reporting?
+- How we can try to address that?
 
 ## Next steps
+- Integrating hardware with Adafruit Bluefruit device
