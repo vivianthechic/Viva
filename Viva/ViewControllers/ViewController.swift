@@ -8,6 +8,10 @@
 
 import UIKit
 
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseFirestoreSwift
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var signUpButton: UIButton!
@@ -15,8 +19,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // extra setup
+        let settings = FirestoreSettings()
+        
+        Firestore.firestore().settings = settings
+        
+        // end setup
+        db = Firestore.firestore();
+        
         setUpElements()
+    }
+    
+    override func didRecieveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     func setUpElements(){
@@ -28,7 +44,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
