@@ -31,6 +31,10 @@ class SignUpViewController: UIViewController {
         errorLabel.alpha = 0
         
         //Style elements
+        StyleUtilities.styleTextField(firstNameTextField)
+        StyleUtilities.styleTextField(lastNameTextField)
+        StyleUtilities.styleTextField(emailTextField)
+        StyleUtilities.styleTextField(passwordTextField)
         StyleUtilities.styleFilledButton(signUpButton)
     }
 
