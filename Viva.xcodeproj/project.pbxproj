@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293B9B01250D21EA0094D738 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293B9AFE250D21C70094D738 /* MapboxMobileEvents.framework */; };
+		293B9B02250D21EA0094D738 /* MapboxMobileEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 293B9AFE250D21C70094D738 /* MapboxMobileEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		293B9B04250D21ED0094D738 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293B9AFC250D21C10094D738 /* Mapbox.framework */; };
+		293B9B05250D21ED0094D738 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 293B9AFC250D21C10094D738 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		29A5638AEFC5DCBED443419A /* Pods_Viva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D73B196349E39F5F226130 /* Pods_Viva.framework */; };
 		2CB5335A3E3D14AD20E815E0 /* Pods_VivaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81768322A9BD76CBA1C27ABE /* Pods_VivaTests.framework */; };
 		444AE539250C0834002C02D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE538250C0834002C02D7 /* LoginViewController.swift */; };
@@ -44,8 +48,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		293B9B03250D21EA0094D738 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				293B9B02250D21EA0094D738 /* MapboxMobileEvents.framework in Embed Frameworks */,
+				293B9B05250D21ED0094D738 /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		14D73B196349E39F5F226130 /* Pods_Viva.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viva.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		293B9AFC250D21C10094D738 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		293B9AFE250D21C70094D738 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = "<group>"; };
 		2C6B066092873E88D2199B6E /* Pods-Viva-VivaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viva-VivaUITests.release.xcconfig"; path = "Target Support Files/Pods-Viva-VivaUITests/Pods-Viva-VivaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		444AE538250C0834002C02D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		444AE53A250C0842002C02D7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293B9B01250D21EA0094D738 /* MapboxMobileEvents.framework in Frameworks */,
 				29A5638AEFC5DCBED443419A /* Pods_Viva.framework in Frameworks */,
+				293B9B04250D21ED0094D738 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +136,15 @@
 				81768322A9BD76CBA1C27ABE /* Pods_VivaTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		293B9B00250D21CB0094D738 /* Mapbox */ = {
+			isa = PBXGroup;
+			children = (
+				293B9AFC250D21C10094D738 /* Mapbox.framework */,
+				293B9AFE250D21C70094D738 /* MapboxMobileEvents.framework */,
+			);
+			path = Mapbox;
 			sourceTree = "<group>";
 		};
 		3EEECAA6DCF233645CE91BA7 /* Pods */ = {
@@ -153,6 +185,7 @@
 		4490F5C8250AE221009EBFBE = {
 			isa = PBXGroup;
 			children = (
+				293B9B00250D21CB0094D738 /* Mapbox */,
 				4490F5D3250AE221009EBFBE /* Viva */,
 				4490F5E8250AE224009EBFBE /* VivaTests */,
 				4490F5F3250AE224009EBFBE /* VivaUITests */,
@@ -217,6 +250,7 @@
 				4490F5CE250AE221009EBFBE /* Frameworks */,
 				4490F5CF250AE221009EBFBE /* Resources */,
 				B3B06FEC81862ED3B34239B9 /* [CP] Embed Pods Frameworks */,
+				293B9B03250D21EA0094D738 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -626,8 +660,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9F68320810F0AE998189B00 /* Pods-Viva.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Mapbox",
+				);
 				INFOPLIST_FILE = Viva/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -644,8 +683,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45C87CD368BBD167E298170E /* Pods-Viva.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Mapbox",
+				);
 				INFOPLIST_FILE = Viva/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

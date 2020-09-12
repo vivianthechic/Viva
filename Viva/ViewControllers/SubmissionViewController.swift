@@ -26,21 +26,49 @@ class SubmissionViewController: UIViewController, UIGestureRecognizerDelegate {
 
     // Document Reference
     var survivordata: Firestore!
-    var docRef: DocumentReference!
-    
-    // Geotapped Button Response
-    @IBAction func saveGeoTapped(_sender: UIButton!) {
-        // create function for tapped button
-        print("Button Tapped!")
-        
-    }
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var streetTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var stateTextField: UITextField!
+    @IBOutlet weak var zipTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var storyTextView: UITextView!
+    var imageView: UIImageView = {
+        let imageView = UIImageView(frame:.zero)
+        imageView.image = UIImage(named: "submission_bg.png")
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //docRef = Firebase.firestore().collection("sample data").document("sampleData/inspiration");
 
+        view.insertSubview(imageView, at: 0)
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: view.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
         // Do any additional setup after loading the view.
+        setUpElements()
+    }
+    
+    func setUpElements(){
+        titleLabel.clipsToBounds = true
+        titleLabel.layer.cornerRadius = 25.0
+        StyleUtilities.styleTextView(storyTextView)
+        StyleUtilities.styleTextField(streetTextField)
+        StyleUtilities.styleTextField(cityTextField)
+        StyleUtilities.styleTextField(stateTextField)
+        StyleUtilities.styleTextField(zipTextField)
+        StyleUtilities.styleTextField(dateTextField)
+        StyleUtilities.styleFilledButton(submitButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,16 +125,9 @@ class SubmissionViewController: UIViewController, UIGestureRecognizerDelegate {
 
 
     }
-
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func submitTapped(_ sender: Any) {
+        
     }
-    */
-
+    
 }
