@@ -83,12 +83,13 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wce-Q0-Xyg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wce-Q0-Xyg">
                                         <rect key="frame" x="0.0" y="140" width="295" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="BLp-T4-pqs"/>
                                         </constraints>
-                                        <state key="normal" title="Login"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="   login"/>
                                         <connections>
                                             <action selector="loginTapped:" destination="2nl-Yk-SAD" eventType="touchUpInside" id="HcL-O0-zj5"/>
                                         </connections>
@@ -302,9 +303,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="6x6-KA-mTh" kind="relationship" relationship="viewControllers" id="zwx-mk-oFM"/>
                         <segue destination="tje-Qh-Vb5" kind="relationship" relationship="viewControllers" id="WeN-es-O3a"/>
                         <segue destination="I3F-Wd-yFz" kind="relationship" relationship="viewControllers" id="KxR-sf-glb"/>
-                        <segue destination="6x6-KA-mTh" kind="relationship" relationship="viewControllers" id="zwx-mk-oFM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUm-Sn-Q5U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
