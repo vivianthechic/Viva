@@ -18,6 +18,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     var imageView: UIImageView = {
         let imageView = UIImageView(frame:.zero)
         imageView.image = UIImage(named: "login_bg.png")
@@ -41,8 +42,9 @@ class SignUpViewController: UIViewController {
     }
     
     func setUpElements(){
-        //Hide error label
+        //Hide error label and loading
         errorLabel.alpha = 0
+        loadingIndicator.alpha = 0
         
         //Style elements
         StyleUtilities.styleTextField(firstNameTextField)
@@ -80,6 +82,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
+        loadingIndicator.alpha = 1
         // Validate fields
         let error = validateFields()
         if error != nil {
@@ -113,6 +116,7 @@ class SignUpViewController: UIViewController {
     }
     
     func showError(_ message:String) {
+        loadingIndicator.alpha = 0
         errorLabel.text = message
         errorLabel.alpha = 1
     }

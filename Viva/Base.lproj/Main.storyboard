@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BtA-4E-1pm">
-                                <rect key="frame" x="40" y="40" width="295" height="230.5"/>
+                                <rect key="frame" x="40" y="40" width="295" height="270.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucP-Y8-gNn">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
@@ -100,6 +100,9 @@
                                         <color key="textColor" red="1" green="0.098247445577823611" blue="0.034784014827571097" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fSY-wY-OCm">
+                                        <rect key="frame" x="0.0" y="250.5" width="295" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="n3F-21-ILj" firstAttribute="height" secondItem="ucP-Y8-gNn" secondAttribute="height" id="VMk-nn-jbA"/>
@@ -118,13 +121,14 @@
                     <connections>
                         <outlet property="emailTextField" destination="ucP-Y8-gNn" id="xpO-V5-R98"/>
                         <outlet property="errorLabel" destination="hc8-4D-fHD" id="MZJ-pl-9FB"/>
+                        <outlet property="loadingIndicator" destination="fSY-wY-OCm" id="oHW-oG-5RV"/>
                         <outlet property="loginButton" destination="Wce-Q0-Xyg" id="ZzZ-QV-465"/>
                         <outlet property="passwordTextField" destination="n3F-21-ILj" id="bDR-sx-CDI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAL-U1-bmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="445"/>
+            <point key="canvasLocation" x="1837.5999999999999" y="444.82758620689657"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="SWf-fa-EtZ">
@@ -135,7 +139,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C9l-Vt-ILD">
-                                <rect key="frame" x="40" y="40" width="295" height="370.5"/>
+                                <rect key="frame" x="40" y="40" width="295" height="410.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2BJ-YD-VPk">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
@@ -174,6 +178,9 @@
                                         <color key="textColor" red="1" green="0.073727279225506037" blue="0.026347941305175149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="QcL-1o-s6Z">
+                                        <rect key="frame" x="0.0" y="390.5" width="295" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cjw-tj-eCd" firstAttribute="height" secondItem="2BJ-YD-VPk" secondAttribute="height" id="6UT-9S-Iqh"/>
@@ -196,6 +203,7 @@
                         <outlet property="errorLabel" destination="XAl-Pk-Z44" id="XkU-6z-iL6"/>
                         <outlet property="firstNameTextField" destination="2BJ-YD-VPk" id="scI-v0-2la"/>
                         <outlet property="lastNameTextField" destination="44X-nO-sff" id="mAe-ja-eid"/>
+                        <outlet property="loadingIndicator" destination="QcL-1o-s6Z" id="Ewe-md-3Jy"/>
                         <outlet property="passwordTextField" destination="DHx-g4-wD5" id="hvj-Cv-hy8"/>
                         <outlet property="signUpButton" destination="cjw-tj-eCd" id="WXq-0O-p7x"/>
                     </connections>
@@ -280,11 +288,14 @@
         <!--Settings-->
         <scene sceneID="rzV-9z-Xja">
             <objects>
-                <navigationController navigationBarHidden="YES" id="I3F-Wd-yFz" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" hidesBarsOnTap="YES" id="I3F-Wd-yFz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="OzF-bc-SPo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ogm-Sk-mrV">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w2R-gc-S5g">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="ToU-7H-Xtp" kind="relationship" relationship="rootViewController" id="dkO-Sd-ftB"/>
                     </connections>
@@ -331,7 +342,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gqP-uz-4xK">
             <objects>
-                <navigationController storyboardIdentifier="firstVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Pej-iE-ayQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="firstVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" hidesBarsOnTap="YES" id="Pej-iE-ayQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="abf-4O-GRZ">
                         <autoresizingMask key="autoresizingMask"/>

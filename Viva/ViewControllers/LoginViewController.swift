@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     var imageView: UIImageView = {
         let imageView = UIImageView(frame:.zero)
         imageView.image = UIImage(named: "login_bg.png")
@@ -38,7 +39,8 @@ class LoginViewController: UIViewController {
     }
     
     func setUpElements(){
-        //Hide error label
+        //Hide error label and loading
+        loadingIndicator.alpha = 0
         errorLabel.alpha = 0
         
         //Style elements
@@ -67,6 +69,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
+        loadingIndicator.alpha = 1
         // Validate fields
         let error = validateFields()
         if error != nil {
@@ -86,6 +89,7 @@ class LoginViewController: UIViewController {
     }
     
     func showError(_ message:String) {
+        loadingIndicator.alpha = 0
         errorLabel.text = message
         errorLabel.alpha = 1
     }
