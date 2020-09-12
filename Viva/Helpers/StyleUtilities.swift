@@ -20,6 +20,13 @@ class StyleUtilities {
         textfield.textColor = UIColor(red: 0.02, green: 0.34, blue: 0.40, alpha: 1.00)
     }
     
+    static func styleHStack(_ hstack:UIStackView){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: hstack.frame.height - 2, width: hstack.frame.width, height: 2)
+        bottomLine.backgroundColor = UIColor(red: 0.97, green: 0.96, blue: 0.79, alpha: 1.00).cgColor
+        hstack.layer.addSublayer(bottomLine)
+    }
+    
     static func styleFilledButton(_ button:UIButton){
         button.backgroundColor = UIColor(red: 0.02, green: 0.34, blue: 0.40, alpha: 1.00)
         button.layer.cornerRadius = 25.0
