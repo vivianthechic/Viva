@@ -14,7 +14,7 @@ import UIKit
 
 class SubmissionViewController: UIViewController {
     
-    var db: Firestore;
+    var survivordata: Firestore;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +33,48 @@ class SubmissionViewController: UIViewController {
     @IBAction func didClickReportButton(_sender: AnyObject) {
         // Quickstart
         
+        
         // Data Collection
         listenDocument()
     }
     
-    private func listenDocument() {
-        // [START] listen document
-        db.collection("cities").document("SF")
+    private func createDocument() {
+        // [START add document]
+            // add a document with a generated ID
+        var ref : DocumentReference? = nil;
         
+        survivordata = db.collection("users").addDocument(data: [
+            "first" : "Andrea",
+            "last"  : "Tongsak",
+            "born"  : 2001
+        ]) {
+            err in if let err = err {
+                print("Error adding document: \(err)") } else {
+                print("Document added with ID: : \(ref!.documentID)") {
+                        }
+                    }
+                
+            }
+        }
+    }
+
+    private func getCollection() {
+        // user the data to get a collection
+        survivordata.collection("users").getDocuments() {
+            (querySnapshot, err) in
+            if let err = err {
+                print ("Error getting documents");
+                //print ("Error getting documents");
+            }
         
     }
+    
+//    private func listenDocument() {
+//        // [START] listen document
+//        survivordata.collection("cities").document("SF")
+//
+//
+//    }
 
     
     /*
