@@ -9,6 +9,8 @@ target 'Viva' do
 
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Auth'
+	pod 'Firebase/Core'
+	pod 'Firebase/Firestore'
 
   target 'VivaTests' do
     inherit! :search_paths
