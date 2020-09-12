@@ -16,6 +16,13 @@ class SubmissionViewController: UIViewController {
     
     var survivordata: Firestore!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var streetTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var stateTextField: UITextField!
+    @IBOutlet weak var zipTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var storyTextView: UITextView!
     var imageView: UIImageView = {
         let imageView = UIImageView(frame:.zero)
         imageView.image = UIImage(named: "submission_bg.png")
@@ -41,6 +48,13 @@ class SubmissionViewController: UIViewController {
     func setUpElements(){
         titleLabel.clipsToBounds = true
         titleLabel.layer.cornerRadius = 25.0
+        StyleUtilities.styleTextView(storyTextView)
+        StyleUtilities.styleTextField(streetTextField)
+        StyleUtilities.styleTextField(cityTextField)
+        StyleUtilities.styleTextField(stateTextField)
+        StyleUtilities.styleTextField(zipTextField)
+        StyleUtilities.styleTextField(dateTextField)
+        StyleUtilities.styleFilledButton(submitButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,16 +111,9 @@ class SubmissionViewController: UIViewController {
 
 
     }
-
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func submitTapped(_ sender: Any) {
+        
     }
-    */
-
+    
 }
