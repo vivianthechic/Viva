@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -125,7 +125,6 @@
 				AB28F1849323FB57D9B785F6 /* Pods-VivaTests.debug.xcconfig */,
 				FA06F0F7139A8F60A88DF87E /* Pods-VivaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -627,7 +626,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9F68320810F0AE998189B00 /* Pods-Viva.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Viva/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -645,7 +644,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45C87CD368BBD167E298170E /* Pods-Viva.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Viva/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
