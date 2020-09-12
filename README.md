@@ -41,7 +41,20 @@ Even with the #MeToo movement, there's only so much that technology can do. Howe
 ## Survey results
 We surveyed Case Western Reserve University students on the viability of a viva product. 83.33% reported that they know someone who has been a victim of sexual assault on a college campus, and 45.45% were victims themselves. 83.33% had noticed a rise of sexual assault allegations about college campus sexual assault on social media, which was the original driving force and inspiration of our app. Last, 100% responded that they believe an app like viva would be effective at keeping them safe from campus sexual assault. The survey indicated that the app could be a useful and desired tool for college students dealing with fear of harm on campus.
 
+## Functions
+- Account creating and sign in function using Firebox, to allow users to have accounts and profiles
+- Home screen with heat map of dangerous locations in the area, using the Mapbox SDK
+- Profile screen, listing contact information and displaying the user's past submissions of dangerous locations
+- Submission screen, where users can enter an address, time, and story related to a dangerous area on campus
+
 ## Coding difficulties
+Mapbox SDK
+-  Integrating an outside mapping service came with a variety of difficulties. We ran into problems learning their platform and troubleshooting errors with the Mapbox view. Furthermore, Mapbox has a lot of navigation functionality. Since our goal was a data map with a lot of visual effect and easy readability, we had to translate the Mapbox SDK to be usable with lots of data inputs. This meant coding so that the map would auto-adjust with each new data submission of dangerous locations on campus.
+UI Privacy Concerns
+- The Mapbox SDK was created to be able to pin very specific locations. However, our app deals with data points of locations of sexual assault, or unsafe locations. This brings up the concern of protecting the privacy of the people who submit addresses, and ensuring that users can't see the exact location submitted. So, we had to adjust the code to limit how far a user can zoom in, and to read as a heat map of general location, rather than pins.
+Coding for non-tech users
+- Our app, viva, was designed to be used by college students on their nights out, or at parties. The idea would be for them to check the safety of their area while walking home or while out with friends. So, we had to appeal to an audience of young people using the app in their free time or during special occasions. This meant the app would not appeal if it seemed tech-y or hard to use. So, we had to work to incorporate a lot of functionalities, and a user interface that was easy to use and appealing to young people. This included allowing them to make accounts, having an easily readable map, creating a submission page, and incorporating design elements.
+
 
 ## Contributors
 Andrea Tongsak, Vivian Zhang, Alyssa Tan, and Mira Tellegen
