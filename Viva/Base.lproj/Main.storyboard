@@ -396,7 +396,7 @@
                                 <rect key="frame" x="20" y="20" width="335" height="618"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UIc-os-62f">
-                                        <rect key="frame" x="20" y="20" width="295" height="794"/>
+                                        <rect key="frame" x="20" y="20" width="295" height="874.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="make a new submission" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxR-Ud-GUD">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="82"/>
@@ -471,8 +471,17 @@
                                                     <action selector="submitTapped:" destination="Hic-3z-4o5" eventType="touchUpInside" id="yl6-su-6Uu"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WM-BH-DFm">
+                                                <rect key="frame" x="0.0" y="666" width="295" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4Iw-vz-Lpq">
+                                                <rect key="frame" x="0.0" y="706.5" width="295" height="20"/>
+                                            </activityIndicatorView>
                                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S96-2N-Z4u">
-                                                <rect key="frame" x="0.0" y="666" width="295" height="128"/>
+                                                <rect key="frame" x="0.0" y="746.5" width="295" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="9IC-B2-h7x"/>
@@ -513,6 +522,8 @@
                     <connections>
                         <outlet property="cityTextField" destination="MK7-eP-UD6" id="bDN-CW-GI7"/>
                         <outlet property="dateTextField" destination="Z32-eR-P21" id="RVE-ac-qZN"/>
+                        <outlet property="errorLabel" destination="2WM-BH-DFm" id="nSp-Wq-gCF"/>
+                        <outlet property="loadingIndicator" destination="4Iw-vz-Lpq" id="pPn-5t-iah"/>
                         <outlet property="stateTextField" destination="DPP-CF-qE0" id="8bS-hm-I7H"/>
                         <outlet property="storyTextView" destination="h9x-KI-rbb" id="hqb-2k-Aww"/>
                         <outlet property="streetTextField" destination="DQH-ly-HpR" id="Qn1-jt-0gt"/>
