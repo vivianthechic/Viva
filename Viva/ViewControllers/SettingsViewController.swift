@@ -26,6 +26,11 @@ class SettingsViewController: UIViewController {
     }
     
     func setUpElements() {
+        // Style elements
+        StyleUtilities.styleHStack(self.nameStackView)
+        StyleUtilities.styleHStack(self.emailStackView)
+        StyleUtilities.styleHollowButton(self.logoutButton)
+        
         // Load name and email
         let db = Firestore.firestore()
         let user = Auth.auth().currentUser
@@ -37,10 +42,6 @@ class SettingsViewController: UIViewController {
                     let doc = querySnapshot!.documents[0]
                     self.nameLabel.text = (doc.get("firstName") as! String).lowercased() + " " + (doc.get("lastName") as! String).lowercased()
                     self.emailLabel.text = user?.email
-                    // Style elements
-                    StyleUtilities.styleHStack(self.nameStackView)
-                    StyleUtilities.styleHStack(self.emailStackView)
-                    StyleUtilities.styleHollowButton(self.logoutButton)
                 }
             }
         } else {

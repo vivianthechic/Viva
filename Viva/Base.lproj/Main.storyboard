@@ -391,10 +391,32 @@
                     <view key="view" contentMode="scaleToFill" id="HJZ-Qa-w13">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UIc-os-62f">
+                                <rect key="frame" x="40" y="40" width="295" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="make a new submission" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxR-Ud-GUD">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="82"/>
+                                        <color key="backgroundColor" red="0.38823529411764707" green="0.83529411764705885" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                                        <color key="textColor" red="0.96862745100000003" green="0.95686274510000002" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UIc-os-62f" firstAttribute="leading" secondItem="OdZ-BK-9Vf" secondAttribute="leading" constant="40" id="24a-sH-fV2"/>
+                            <constraint firstItem="OdZ-BK-9Vf" firstAttribute="trailing" secondItem="UIc-os-62f" secondAttribute="trailing" constant="40" id="EOO-Yv-3I9"/>
+                            <constraint firstItem="UIc-os-62f" firstAttribute="top" secondItem="OdZ-BK-9Vf" secondAttribute="top" constant="40" id="F8E-jD-oI4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OdZ-BK-9Vf"/>
                     </view>
                     <navigationItem key="navigationItem" id="qlx-kv-WHc"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="OxR-Ud-GUD" id="NEq-0T-Mm8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chQ-iJ-iH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
