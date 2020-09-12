@@ -8,6 +8,10 @@
 
 import UIKit
 
+import FirebaseCore
+import FirebaseFirestore
+//import FirebaseFirestoreSwift
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var signUpButton: UIButton!
@@ -31,6 +35,14 @@ class ViewController: UIViewController {
             imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        // extra setup
+        let settings = FirestoreSettings()
+        
+        Firestore.firestore().settings = settings
+        
+        // end setup
+        //db = Firestore.firestore();
         setUpElements()
     }
     

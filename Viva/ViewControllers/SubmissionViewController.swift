@@ -8,13 +8,13 @@
 
 import UIKit
 
-//import FirebaseCore
-// import Firebase
+import FirebaseCore
+import FirebaseFirestore
 //import FirebaseAnalytics
 
 class SubmissionViewController: UIViewController {
     
-    // var db: Firestore
+    var survivordata: Firestore!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,20 +29,52 @@ class SubmissionViewController: UIViewController {
     
     // create a database collection for geolocation
     
-    /*
+    @IBOutlet weak var someView:UIView!
+    
     // create the button here
     @IBAction func didClickReportButton(_sender: AnyObject) {
         // Quickstart
         
+        
         // Data Collection
-        listenDocument()
+        //listenDocument()
+    }
+    
+//    private func createDocument() {
+//        // [START add document]
+//            // add a document with a generated ID
+//        //var ref : DocumentReference? = nil;
+//
+//        survivordata = survivordata.collection("users").addDocument(data: [
+//            "first" : "Andrea",
+//            "last"  : "Tongsak",
+//            "born"  : 2001
+//        ]) {
+//            err in if let err = err {
+//                print("Error adding document: \(err)") } else {
+//                print("Document added with ID: : \(ref!.documentID)") {
+//                }
+//            }
+//
+//        }
+//    }
+
+    private func getCollection() {
+        // user the data to get a collection
+        survivordata.collection("survivors").getDocuments() {
+            (querySnapshot, err) in
+            if let err = err {
+                print ("Error getting documents");
+            }
+        }
+        
     }
     
     private func listenDocument() {
         // [START] listen document
-        db.collection("cities").document("SF")
-        
-        
+        survivordata.collection("cities").document("SF")
+
+
     }
 
     
@@ -55,6 +87,5 @@ class SubmissionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
- */
 
 }
