@@ -660,7 +660,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9F68320810F0AE998189B00 /* Pods-Viva.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -683,7 +683,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45C87CD368BBD167E298170E /* Pods-Viva.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

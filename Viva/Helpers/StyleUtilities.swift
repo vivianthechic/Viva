@@ -20,6 +20,12 @@ class StyleUtilities {
         textfield.textColor = UIColor(red: 0.02, green: 0.34, blue: 0.40, alpha: 1.00)
     }
     
+    static func styleTextView(_ textview:UITextView){
+        textview.layer.cornerRadius = 10.0
+        textview.layer.borderWidth = 2
+        textview.layer.borderColor = UIColor(red: 0.02, green: 0.34, blue: 0.40, alpha: 1.00).cgColor
+    }
+    
     static func styleHStack(_ hstack:UIStackView){
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0, y: hstack.frame.height - 2, width: hstack.frame.width, height: 2)
