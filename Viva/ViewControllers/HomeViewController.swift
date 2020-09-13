@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
     var source: MGLShapeSource!
     var timer = Timer()
     var searchButton:UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,7 +47,10 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
     }
     
     @objc func searchButtonWasPressed(_ sender:UIButton){
-        
+//        let searchView = storyboard?.instantiateViewController(withIdentifier: "SearchViewController")
+//        view.window?.rootViewController = searchView
+//        view.window?.makeKeyAndVisible()
+        performSegue(withIdentifier: "searchScreen", sender: self)
     }
     
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {

@@ -223,10 +223,29 @@
                         <viewLayoutGuide key="safeArea" id="4cJ-Kk-0Yl"/>
                     </view>
                     <navigationItem key="navigationItem" id="zcb-g3-1Wb"/>
+                    <connections>
+                        <segue destination="vGY-1p-qYZ" kind="show" identifier="searchScreen" id="LBm-hQ-qyr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlb-7t-Fyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3703.1999999999998" y="545.57721139430294"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="QTI-1W-NtJ">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="vGY-1p-qYZ" customClass="SearchViewController" customModule="Viva" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ytP-iy-JMy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kol-mj-T7D"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p0d-aZ-3jc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OkI-zv-V6u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3677" y="1268"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="Pwd-Yd-qvp">
@@ -545,10 +564,11 @@
         <!--Home-->
         <scene sceneID="UjC-po-9iP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6x6-KA-mTh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6x6-KA-mTh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="X0x-Ci-ECN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3VD-lI-45g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
