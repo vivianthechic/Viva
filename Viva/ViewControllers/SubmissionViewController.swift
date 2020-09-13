@@ -84,38 +84,6 @@ class SubmissionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // create a database collection for geolocation
-    
-    @IBOutlet weak var someView:UIView!
-    
-    // create the button here
-    @IBAction func didClickReportButton(_sender: AnyObject) {
-        // Quickstart
-        
-        
-        // Data Collection
-        //listenDocument()
-    }
-    
-//    private func createDocument() {
-//        // [START add document]
-//            // add a document with a generated ID
-//        //var ref : DocumentReference? = nil;
-//
-//        survivordata = survivordata.collection("users").addDocument(data: [
-//            "first" : "Andrea",
-//            "last"  : "Tongsak",
-//            "born"  : 2001
-//        ]) {
-//            err in if let err = err {
-//                print("Error adding document: \(err)") } else {
-//                print("Document added with ID: : \(ref!.documentID)") {
-//                }
-//            }
-//
-//        }
-//    }
-    
     func validateFields() -> String? {
         // Check all fields are filled in
         if streetTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -175,7 +143,7 @@ class SubmissionViewController: UIViewController {
                 if error != nil {
                     self.showError("Unable to save submission")
                 } else {
-                    self.showToast()
+                    self.transitionToHome()
                 }
             }
         }
@@ -187,20 +155,4 @@ class SubmissionViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
-    func showToast() {
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2-100, y: self.view.frame.size.height-100, width: 200, height: 50))
-        toastLabel.backgroundColor = UIColor(red: 0.39, green: 0.84, blue: 0.76, alpha: 0.70)
-        toastLabel.textColor = UIColor(red: 0.02, green: 0.34, blue: 0.40, alpha: 1.00)
-        toastLabel.font = .systemFont(ofSize: 17.0)
-        toastLabel.textAlignment = .center
-        toastLabel.text = "Successfully submitted."
-        toastLabel.alpha = 1
-        toastLabel.layer.cornerRadius = 10
-        toastLabel.clipsToBounds = true
-        self.view.addSubview(toastLabel)
-        UIView.animate(withDuration: 2.0, delay: 0.1, options: .curveEaseOut, animations: {toastLabel.alpha = 0}) { (isCompleted) in
-            toastLabel.removeFromSuperview()
-            self.transitionToHome()
-        }
-    }
 }
