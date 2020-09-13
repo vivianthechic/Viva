@@ -40,6 +40,12 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
         
         view.addSubview(mapView)
         
+        
+        // mira addition - Set the map’s center coordinate and zoom level.
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 41.5043, longitude: -81.6084), zoomLevel: 15, animated: false)
+        view.addSubview(mapView)
+ 
+        
         mapView.showsUserLocation = true
         if(trackUser){
             mapView.setUserTrackingMode(.follow, animated: true) {}
@@ -62,6 +68,7 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
         searchButton.addTarget(self, action: #selector(searchButtonWasPressed(_:)), for: .touchUpInside)
         view.addSubview(searchButton)
         
+        
     }
     
     @objc func searchButtonWasPressed(_ sender:UIButton){
@@ -69,15 +76,24 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
     }
     
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+        
+        /*
+        
+        // Retrieve data and set as source. This associates the data with the map, but style layers are still required to make data visible.
+        let url = Bundle.main.url(forResource: "map", withExtension: "geojson")!
+        source = MGLShapeSource(identifier: "map", url: url, options: nil)
+        style.addSource(source)
+        
+         */
+
         //URL NEEDS TO BE CHANGED TO OUR DATA
         if let url = URL(string: "https://wanderdrone.appspot.com/") {
             // Add a source to the map. https://wanderdrone.appspot.com/ generates coordinates for simulated paths.
             source = MGLShapeSource(identifier: "wanderdrone", url: url, options: nil)
             style.addSource(source)
-            
+
             // Create a heatmap layer.
             let heatmapLayer = MGLHeatmapStyleLayer(identifier: "wanderdrone", source: source)
-            
             // Adjust the color of the heatmap based on the point density.
             let colorDictionary: [NSNumber: UIColor] = [
                 0.0: .clear,
