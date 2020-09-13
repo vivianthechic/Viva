@@ -17,6 +17,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailStackView: UIStackView!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var pastButton: UIButton!
     
     var imageView: UIImageView = {
            let imageView = UIImageView(frame:.zero)
@@ -46,7 +47,7 @@ class SettingsViewController: UIViewController {
         StyleUtilities.styleHStack(self.nameStackView)
         StyleUtilities.styleHStack(self.emailStackView)
         StyleUtilities.styleHollowButton(self.logoutButton)
-        
+        pastButton.layer.cornerRadius = 15.0
         // Load name and email
         let db = Firestore.firestore()
         let user = Auth.auth().currentUser
