@@ -11,7 +11,8 @@ target 'Viva' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
-	
+	pod 'MapboxGeocoder.swift', '~> 0.12'
+
   target 'VivaTests' do
     inherit! :search_paths
     # Pods for testing
