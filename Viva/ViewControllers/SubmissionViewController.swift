@@ -129,6 +129,7 @@ class SubmissionViewController: UIViewController {
         let addr = street + ", " + city + ", " + state + " " + zip
         geocoder.geocodeAddressString(addr) { (placemarks, error) in
             guard let placemark = placemarks?.first?.location else {
+                self.showError("Could not recognize address.")
                 return
             }
             // Create doc
