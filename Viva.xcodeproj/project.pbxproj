@@ -12,6 +12,7 @@
 		293B9B04250D21ED0094D738 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293B9AFC250D21C10094D738 /* Mapbox.framework */; };
 		293B9B05250D21ED0094D738 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 293B9AFC250D21C10094D738 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		29A5638AEFC5DCBED443419A /* Pods_Viva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D73B196349E39F5F226130 /* Pods_Viva.framework */; };
+		29D1F869250D80BF003351F0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1F868250D80BF003351F0 /* SearchViewController.swift */; };
 		2CB5335A3E3D14AD20E815E0 /* Pods_VivaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81768322A9BD76CBA1C27ABE /* Pods_VivaTests.framework */; };
 		444AE539250C0834002C02D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE538250C0834002C02D7 /* LoginViewController.swift */; };
 		444AE53B250C0842002C02D7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444AE53A250C0842002C02D7 /* SignUpViewController.swift */; };
@@ -67,6 +68,7 @@
 		14D73B196349E39F5F226130 /* Pods_Viva.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viva.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B9AFC250D21C10094D738 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		293B9AFE250D21C70094D738 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = "<group>"; };
+		29D1F868250D80BF003351F0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2C6B066092873E88D2199B6E /* Pods-Viva-VivaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viva-VivaUITests.release.xcconfig"; path = "Target Support Files/Pods-Viva-VivaUITests/Pods-Viva-VivaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		444AE538250C0834002C02D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		444AE53A250C0842002C02D7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				444AE53A250C0842002C02D7 /* SignUpViewController.swift */,
 				444AE53C250C0854002C02D7 /* HomeViewController.swift */,
 				444AE540250C0878002C02D7 /* SettingsViewController.swift */,
+				29D1F868250D80BF003351F0 /* SearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D1F869250D80BF003351F0 /* SearchViewController.swift in Sources */,
 				444AE53D250C0854002C02D7 /* HomeViewController.swift in Sources */,
 				444AE539250C0834002C02D7 /* LoginViewController.swift in Sources */,
 				F4FA222A250CABBE00092D37 /* SubmissionViewController.swift in Sources */,
