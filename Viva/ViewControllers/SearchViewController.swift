@@ -10,12 +10,12 @@ import UIKit
 import CoreLocation
 
 class SearchViewController: UIViewController {
-
+    
     @IBOutlet weak var searchTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
@@ -30,10 +30,13 @@ class SearchViewController: UIViewController {
             let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
             let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
             let task = session.dataTask(with: request) { (data, response, error) in
-               // This will run when the network request returns
-               if let error = error {
-                  print(error.localizedDescription)
-               } else if let data = data {
+                // This will run when the network request returns
+                if let error = error {
+                    print(error.localizedDescription)
+                    let alert = UIAlertController(title: "Please Try Again", message: "Try entering a different location", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                } else if let data = data {
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                     let features = dataDictionary["features"] as! [[String:Any]]
                     let coor = features[0]["geometry"] as! [String:Any]
@@ -41,9 +44,9 @@ class SearchViewController: UIViewController {
                     let logtitude = coordinates[0] as! Double
                     let latitude = coordinates[1] as! Double
                     print(logtitude,latitude)
-                
+                    
                     let tabBarController = self.storyboard?.instantiateViewController(withIdentifier: "tabBC") as! UITabBarController
-                
+                    
                     let naviViewController = tabBarController.viewControllers?[0] as! UINavigationController
                     let homeViewController = naviViewController.viewControllers[0] as! HomeViewController
                     homeViewController.myLatitude = latitude
@@ -51,28 +54,31 @@ class SearchViewController: UIViewController {
                     homeViewController.trackUser = false
                     self.view.window?.rootViewController = tabBarController
                     self.view.window?.makeKeyAndVisible()
-               }
+                }
             }
             task.resume()
         }
     }
-
+    
     @IBAction func searchPressed(_ sender: Any) {
         if(searchTextField.text != ""){
             findLocation(location: searchTextField.text!)
-            
+        }else{
+            let alert = UIAlertController(title: "Text Field Is Empty", message: "Please enter in a place to search", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
