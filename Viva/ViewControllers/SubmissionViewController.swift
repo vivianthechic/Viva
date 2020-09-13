@@ -137,7 +137,9 @@ class SubmissionViewController: UIViewController {
                 "uid" : Auth.auth().currentUser?.uid,
                 "date" : Timestamp(date: self.dateFormatter.date(from: date)!),
                 "story" : story,
-                "location" : GeoPoint(latitude: placemark.coordinate.latitude, longitude: placemark.coordinate.longitude)
+                "location" : GeoPoint(latitude: placemark.coordinate.latitude, longitude: placemark.coordinate.longitude),
+                "dateString" : date,
+                "locString" : addr
             ]
             db.collection("survivors").addDocument(data: docData) { (error) in
                 if error != nil {
