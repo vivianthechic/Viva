@@ -62,6 +62,7 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
         searchButton.addTarget(self, action: #selector(searchButtonWasPressed(_:)), for: .touchUpInside)
         view.addSubview(searchButton)
         
+        
     }
     
     @objc func searchButtonWasPressed(_ sender:UIButton){
@@ -127,7 +128,6 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(updateUrl), userInfo: nil, repeats: true)
         
-        //}
     }
     
     func mapView(_ mapView: MGLMapView, shouldChangeFrom oldCamera: MGLMapCamera, to newCamera: MGLMapCamera) -> Bool {
