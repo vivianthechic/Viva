@@ -14,6 +14,10 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
     var source: MGLShapeSource!
     var timer = Timer()
     var searchButton:UIButton!
+    var bounds: MGLCoordinateBounds!
+    var myLongtitude: Double!
+    var myLatitude: Double!
+    var trackUser: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +26,25 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
         mapView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         mapView.delegate = self
         mapView.tintColor = .lightGray
-        view.addSubview(mapView)
         
+        if (trackUser == false){
+            let center = CLLocationCoordinate2D(latitude: myLatitude, longitude: myLongtitude)
+            // Starting point
+            mapView.setCenter(center, zoomLevel: 13, direction: 0, animated: false)
+            
+            // Colorado’s bounds
+            let northeast = CLLocationCoordinate2D(latitude: myLatitude + 2, longitude: myLongtitude + 3)
+            let southwest = CLLocationCoordinate2D(latitude: myLatitude - 2, longitude: myLongtitude - 3)
+            bounds = MGLCoordinateBounds(sw: southwest, ne: northeast)
+        }
         
-        // mira addition - Set the map’s center coordinate and zoom level.
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 41.5043, longitude: -81.6084), zoomLevel: 15, animated: false)
         view.addSubview(mapView)
- 
         
         mapView.showsUserLocation = true
-        //mapView.setUserTrackingMode(.follow, animated: true) {
-        //}
+        if(trackUser){
+            mapView.setUserTrackingMode(.follow, animated: true) {}
+        }
+        
         addButton()
     }
     
@@ -54,23 +66,10 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
     }
     
     @objc func searchButtonWasPressed(_ sender:UIButton){
-//        let searchView = storyboard?.instantiateViewController(withIdentifier: "SearchViewController")
-//        view.window?.rootViewController = searchView
-//        view.window?.makeKeyAndVisible()
         performSegue(withIdentifier: "searchScreen", sender: self)
     }
     
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
-        
-        /*
-        
-        // Retrieve data and set as source. This associates the data with the map, but style layers are still required to make data visible.
-        let url = Bundle.main.url(forResource: "map", withExtension: "geojson")!
-        source = MGLShapeSource(identifier: "map", url: url, options: nil)
-        style.addSource(source)
-        
-         */
-
         //URL NEEDS TO BE CHANGED TO OUR DATA
         if let url = URL(string: "https://wanderdrone.appspot.com/") {
             // Add a source to the map. https://wanderdrone.appspot.com/ generates coordinates for simulated paths.
@@ -78,47 +77,46 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
             style.addSource(source)
 
             // Create a heatmap layer.
-            let heatmapLayer = MGLHeatmapStyleLayer(identifier: "map", source: source)
-             
+            let heatmapLayer = MGLHeatmapStyleLayer(identifier: "wanderdrone", source: source)
             // Adjust the color of the heatmap based on the point density.
             let colorDictionary: [NSNumber: UIColor] = [
                 0.0: .clear,
-            0.1: .blue,
-            0.3: .cyan,
-            0.5: .green,
-            0.7: .yellow,
-            1: .red
+                0.1: .blue,
+                0.3: .cyan,
+                0.5: .green,
+                0.7: .yellow,
+                1: .red
             ]
             heatmapLayer.heatmapColor = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($heatmapDensity, 'linear', nil, %@)", colorDictionary)
-             
+            
             // Heatmap weight measures how much a single data point impacts the layer's appearance.
             heatmapLayer.heatmapWeight = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:(mag, 'linear', nil, %@)",
-            [0: 0,
-            6: 1])
-             
+                                                      [0: 0,
+                                                       6: 1])
+            
             // Heatmap intensity multiplies the heatmap weight based on zoom level.
             heatmapLayer.heatmapIntensity = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
-            [0: 1,
-            10: 1])
+                                                         [0: 1,
+                                                          10: 1])
             heatmapLayer.heatmapRadius = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
-            [5: 10,
-            16: 100])
-             
+                                                      [5: 10,
+                                                       16: 100])
+            
             // The heatmap layer should be visible up to zoom level 9.
             heatmapLayer.heatmapOpacity = NSExpression(format: "mgl_step:from:stops:($zoomLevel, 0.75, %@)", [0: 0.75, 9: 0])
             style.addLayer(heatmapLayer)
-             
+            
             // Add a circle layer to represent the earthquakes at higher zoom levels.
             let circleLayer = MGLCircleStyleLayer(identifier: "circle-layer", source: source)
-             
+            
             let magnitudeDictionary: [NSNumber: UIColor] = [
-            0: .white,
-            0.5: .yellow,
-            2.5: UIColor(red: 0.73, green: 0.23, blue: 0.25, alpha: 1.0),
-            5: UIColor(red: 0.19, green: 0.30, blue: 0.80, alpha: 1.0)
+                0: .white,
+                0.5: .yellow,
+                2.5: UIColor(red: 0.73, green: 0.23, blue: 0.25, alpha: 1.0),
+                5: UIColor(red: 0.19, green: 0.30, blue: 0.80, alpha: 1.0)
             ]
             circleLayer.circleColor = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:(mag, 'linear', nil, %@)", magnitudeDictionary)
-             
+            
             // The heatmap layer will have an opacity of 0.75 up to zoom level 9, when the opacity becomes 0.
             circleLayer.circleOpacity = NSExpression(format: "mgl_step:from:stops:($zoomLevel, 0, %@)", [0: 0, 9: 0.75])
             circleLayer.circleRadius = NSExpression(forConstantValue: 20)
@@ -128,8 +126,33 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
             //REMOVE TIMER IF NOT NEEDED
             timer.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(updateUrl), userInfo: nil, repeats: true)
-       
+            
         }
+    }
+    
+    func mapView(_ mapView: MGLMapView, shouldChangeFrom oldCamera: MGLMapCamera, to newCamera: MGLMapCamera) -> Bool {
+        
+        // Get the current camera to restore it after.
+        if(trackUser == false){
+            let currentCamera = mapView.camera
+            
+            // From the new camera obtain the center to test if it’s inside the boundaries.
+            let newCameraCenter = newCamera.centerCoordinate
+            
+            // Set the map’s visible bounds to newCamera.
+            mapView.camera = newCamera
+            let newVisibleCoordinates = mapView.visibleCoordinateBounds
+            
+            // Revert the camera.
+            mapView.camera = currentCamera
+            
+            // Test if the newCameraCenter and newVisibleCoordinates are inside self.bounds.
+            let inside = MGLCoordinateInCoordinateBounds(newCameraCenter, self.bounds)
+            let intersects = MGLCoordinateInCoordinateBounds(newVisibleCoordinates.ne, self.bounds) && MGLCoordinateInCoordinateBounds(newVisibleCoordinates.sw, self.bounds)
+            
+            return inside && intersects
+        }
+        return true
     }
     
     @objc func updateUrl() {
@@ -142,5 +165,10 @@ class HomeViewController: UIViewController, MGLMapViewDelegate  {
         timer.invalidate()
         timer = Timer()
     }
+    
+//    public func setCoor(lat: Double, long: Double){
+//        myLatitude = lat
+//        myLongtitude = long
+//    }
     
 }
